@@ -1,0 +1,791 @@
+/* =========================
+   GLOBAL
+========================= */
+
+:root {
+  --bg: #050810;
+  --panel: rgba(10, 17, 31, 0.88);
+  --panel-light: rgba(18, 27, 45, 0.9);
+
+  --border: rgba(255, 255, 255, 0.1);
+
+  --text: #edf5ff;
+  --muted: #718099;
+
+  --cyan: #00e5ff;
+  --violet: #7c5cff;
+  --green: #31e981;
+  --amber: #ffb84d;
+  --red: #ff5577;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* =========================
+   ONBOARDING
+========================= */
+
+.onboarding {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(124, 92, 255, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(0, 229, 255, 0.12),
+      transparent 35%
+    ),
+    var(--bg);
+}
+
+.onboarding-card {
+  width: 100%;
+  max-width: 470px;
+
+  padding: 42px;
+
+  border: 1px solid var(--border);
+  border-radius: 24px;
+
+  background: var(--panel);
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Logo */
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-orbit {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--cyan),
+      var(--violet)
+    );
+
+  box-shadow:
+    0 0 30px rgba(0, 229, 255, 0.25);
+}
+
+.logo-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #07101b;
+}
+
+.logo-text {
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo-text span {
+  color: var(--cyan);
+}
+
+.logo-subtitle {
+  margin-top: 3px;
+
+  font-size: 9px;
+  letter-spacing: 2px;
+
+  color: var(--muted);
+}
+
+
+/* Welcome */
+
+.welcome-section {
+  margin-top: 55px;
+}
+
+.small-label {
+  color: var(--cyan);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.welcome-section h1 {
+  margin: 12px 0;
+
+  font-size: 38px;
+  line-height: 1.1;
+}
+
+.welcome-section h1 span {
+  color: var(--cyan);
+}
+
+.welcome-section p {
+  margin-top: 18px;
+
+  color: var(--muted);
+
+  line-height: 1.7;
+}
+
+
+/* Input */
+
+.input-section {
+  margin-top: 30px;
+}
+
+.input-section label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 10px;
+  letter-spacing: 1.5px;
+
+  color: var(--muted);
+}
+
+.input-section input {
+  width: 100%;
+
+  padding: 14px 15px;
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  outline: none;
+
+  color: var(--text);
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.input-section input:focus {
+  border-color: var(--cyan);
+}
+
+
+/* Buttons */
+
+.orbit-button {
+  width: 100%;
+
+  margin-top: 18px;
+
+  padding: 14px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: none;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--cyan),
+      var(--violet)
+    );
+
+  color: #031018;
+
+  font-weight: 800;
+}
+
+.join-button {
+  width: 100%;
+
+  margin-top: 9px;
+
+  padding: 13px;
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  background: transparent;
+
+  color: var(--text);
+
+  font-size: 12px;
+}
+
+.security-note {
+  margin-top: 24px;
+
+  text-align: center;
+
+  color: var(--muted);
+
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.security-note span {
+  color: var(--green);
+}
+
+
+/* =========================
+   MAIN APP
+========================= */
+
+.orbit-app {
+  width: 100vw;
+  height: 100vh;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: #0d1521;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar {
+  position: absolute;
+
+  top: 14px;
+  left: 14px;
+  right: 14px;
+
+  z-index: 20;
+
+  height: 60px;
+
+  padding: 8px 10px 8px 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid var(--border);
+  border-radius: 17px;
+
+  background: var(--panel);
+
+  backdrop-filter: blur(18px);
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.mini-logo {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--cyan),
+      var(--violet)
+    );
+}
+
+.mini-logo div {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #07101b;
+}
+
+.top-logo-text {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.top-logo-text span {
+  color: var(--cyan);
+}
+
+.group-name {
+  margin-top: 2px;
+
+  color: var(--muted);
+
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.topbar-right button {
+  height: 38px;
+
+  padding: 0 12px;
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.03);
+
+  color: var(--text);
+}
+
+.gps-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-right: 4px;
+
+  color: var(--green);
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.gps-status span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--green);
+
+  box-shadow: 0 0 10px var(--green);
+}
+
+.leave-button {
+  color: var(--red) !important;
+}
+
+
+/* =========================
+   MAP
+========================= */
+
+.map-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.orbit-map {
+  width: 100%;
+  height: 100%;
+  background: #0b0f1a;
+}
+
+/* Leaflet */
+
+.leaflet-control-attribution {
+  background: rgba(5, 8, 16, 0.7) !important;
+  color: #526078 !important;
+
+  font-size: 9px !important;
+}
+
+.leaflet-control-attribution a {
+  color: #718099 !important;
+}
+
+.leaflet-control-zoom {
+  display: none;
+}
+
+/* =========================
+   ORBIT MEMBER MARKER
+========================= */
+
+.orbit-marker {
+  position: relative;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marker-avatar {
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 2.5px solid var(--marker-color);
+
+  background: var(--marker-color);
+
+  color: #04121a;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  z-index: 2;
+
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.5),
+    0 0 15px var(--marker-color);
+}
+
+.marker-pulse {
+  position: absolute;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  border: 2px solid var(--marker-color);
+
+  animation: markerPulse 2.2s ease-out infinite;
+}
+
+@keyframes markerPulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* =========================
+   MEMBERS PANEL
+========================= */
+
+.members-panel {
+  position: absolute;
+
+  top: 88px;
+  right: 14px;
+
+  z-index: 15;
+
+  width: 310px;
+
+  padding: 16px;
+
+  border: 1px solid var(--border);
+  border-radius: 17px;
+
+  background: var(--panel);
+
+  backdrop-filter: blur(18px);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 13px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.panel-title {
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.panel-count {
+  margin-top: 4px;
+
+  color: var(--muted);
+
+  font-size: 9px;
+}
+
+.panel-header button {
+  width: 28px;
+  height: 28px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: rgba(255,255,255,0.05);
+
+  color: var(--muted);
+}
+
+
+/* Member */
+
+.member {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 13px 5px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.member-avatar {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #162438;
+
+  color: var(--cyan);
+
+  font-weight: 800;
+}
+
+.member-info {
+  flex: 1;
+}
+
+.member-name {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.you-label {
+  margin-left: 6px;
+
+  color: var(--cyan);
+
+  font-size: 7px;
+}
+
+.member-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  margin-top: 4px;
+
+  color: var(--muted);
+
+  font-size: 9px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: var(--green);
+}
+
+.status-dot.stale {
+  background: var(--amber);
+}
+
+.member-distance {
+  color: var(--muted);
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   BOTTOM CONTROLS
+========================= */
+
+.bottom-controls {
+  position: absolute;
+
+  left: 50%;
+  bottom: 15px;
+
+  transform: translateX(-50%);
+
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 7px;
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  background: var(--panel);
+
+  backdrop-filter: blur(18px);
+}
+
+.control-button,
+.invite-button {
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 0 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: var(--text);
+
+  font-size: 10px;
+}
+
+.control-button:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+.control-icon {
+  color: var(--cyan);
+
+  font-size: 15px;
+}
+
+.invite-button {
+  background:
+    linear-gradient(
+      135deg,
+      var(--cyan),
+      var(--violet)
+    );
+
+  color: #041019;
+
+  font-weight: 800;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .onboarding-card {
+    padding: 30px 22px;
+  }
+
+  .welcome-section h1 {
+    font-size: 31px;
+  }
+
+  .topbar {
+    left: 8px;
+    right: 8px;
+    top: 8px;
+  }
+
+  .gps-status {
+    display: none;
+  }
+
+  .topbar-right button {
+    padding: 0 9px;
+  }
+
+  .members-panel {
+    top: auto;
+    left: 8px;
+    right: 8px;
+    bottom: 76px;
+
+    width: auto;
+
+    max-height: 260px;
+
+    overflow-y: auto;
+  }
+
+  .bottom-controls {
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+
+    transform: none;
+
+    overflow-x: auto;
+
+    justify-content: flex-start;
+  }
+
+  .control-button,
+  .invite-button {
+    flex-shrink: 0;
+  }
+}

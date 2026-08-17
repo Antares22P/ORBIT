@@ -1,0 +1,13 @@
+# Firebase credentials
+credentials/
+
+# Maven
+target/
+
+# IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

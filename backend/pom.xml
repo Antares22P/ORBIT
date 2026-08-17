@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="
+         http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.orbit</groupId>
+    <artifactId>orbit-backend</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.target>25</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+<dependencies>
+
+    <!-- HTTP SERVER -->
+    <dependency>
+        <groupId>com.sun.net.httpserver</groupId>
+        <artifactId>http</artifactId>
+        <version>20070405</version>
+    </dependency>
+
+    <!-- FIREBASE ADMIN SDK -->
+    <dependency>
+        <groupId>com.google.firebase</groupId>
+        <artifactId>firebase-admin</artifactId>
+        <version>9.10.0</version>
+    </dependency>
+
+    <!-- GSON JSON LIBRARY -->
+    <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>2.13.2</version>
+    </dependency>
+
+</dependencies>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.14.0</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.5.0</version>
+
+                <configuration>
+                    <mainClass>com.orbit.App</mainClass>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
