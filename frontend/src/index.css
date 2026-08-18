@@ -283,3 +283,134 @@ input:focus {
   text-align: center;
   padding: 20px 0;
 }
+
+.connected {
+  display: block;
+  color: green;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.near {
+  display: block;
+  color: orange;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.disconnected {
+  display: block;
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.member-info small {
+  display: block;
+  margin-top: 4px;
+  color: #777;
+  font-size: 12px;
+}
+
+
+
+/* =========================================================
+   MEMBER STATUS
+   ========================================================= */
+
+.connected {
+  display: block;
+  margin-top: 4px;
+  color: green;
+  font-size: 13px;
+}
+
+.near {
+  display: block;
+  margin-top: 4px;
+  color: orange;
+  font-size: 13px;
+}
+
+.disconnected {
+  display: block;
+  margin-top: 4px;
+  color: red;
+  font-size: 13px;
+}
+
+.unknown {
+  display: block;
+  margin-top: 4px;
+  color: #777;
+  font-size: 13px;
+}
+
+.member-info small {
+  display: block;
+  margin-top: 4px;
+  color: #777;
+  font-size: 12px;
+}
+
+/* =========================================================
+   MAP PLACEHOLDER
+   ========================================================= */
+
+.map-placeholder {
+  margin-top: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  border: 1px dashed #ccc;
+  border-radius: 12px;
+}
+
+.map-placeholder-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.map-placeholder h3 {
+  margin: 0 0 5px;
+}
+
+.map-placeholder p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   DESTINATION
+   ========================================================= */
+
+.destination-card {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+.destination-card h3 {
+  margin-top: 0;
+}
+
+.destination-card p {
+  margin: 8px 0;
+}
+
+.destination-card small {
+  display: block;
+  margin-top: 8px;
+  color: #777;
+}
+
+.destination-active {
+  color: green;
+  font-weight: 600;
+}
+
+.delete-destination {
+  margin-top: 10px;
+}
